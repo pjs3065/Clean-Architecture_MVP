@@ -9,7 +9,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.RecyclerView
 import com.practice.mvpdemo.R
 import com.practice.mvpdemo.adapter.ImageAdapter
-import com.practice.mvpdemo.data.ImageData
+import com.practice.mvpdemo.data.source.image.SampleRepository
 import com.practice.mvpdemo.view.main.presenter.MainContract
 import com.practice.mvpdemo.view.main.presenter.MainPresenter
 
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     private val presenter by lazy {
         MainPresenter(
             view = this@MainActivity,
-            imageData = ImageData,
+            imageData = SampleRepository,
             adapterView = imageAdapter,
             adapterModel = imageAdapter
         )
